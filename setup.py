@@ -32,8 +32,7 @@ setup(
     include_package_data=True,
     install_requires=[
         'Flask>=0.10.1',  # TODO: check the oldest version we can work with
-        'blinker',
-        'python-cas'
+        'blinker'
     ],
     setup_requires=pytest_runner,
     tests_require=['pytest', 'pytest-cov', 'pytest-mock'],
