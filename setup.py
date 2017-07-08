@@ -32,7 +32,8 @@ setup(
     include_package_data=True,
     install_requires=[
         'Flask>=0.10.1',  # TODO: check the oldest version we can work with
-        'blinker'
+        'blinker',
+        'python-cas'
     ],
     setup_requires=pytest_runner,
     tests_require=['pytest', 'pytest-cov', 'pytest-mock'],
@@ -46,12 +47,14 @@ setup(
     ],
     entry_points={
         'flask_multipass.auth_providers': {
+            'cas = flask_multipass.providers.cas:CASAuthProvider',
             'ldap = flask_multipass.providers.ldap:LDAPAuthProvider',
             'oauth = flask_multipass.providers.oauth:OAuthAuthProvider',
             'shibboleth = flask_multipass.providers.shibboleth:ShibbolethAuthProvider',
             'static = flask_multipass.providers.static:StaticAuthProvider'
         },
         'flask_multipass.identity_providers': {
+            'cas = flask_multipass.providers.cas:CASIdentityProvider',
             'ldap = flask_multipass.providers.ldap:LDAPIdentityProvider',
             'oauth = flask_multipass.providers.oauth:OAuthIdentityProvider',
             'shibboleth = flask_multipass.providers.shibboleth:ShibbolethIdentityProvider',

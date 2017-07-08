@@ -70,6 +70,11 @@ Here you can see an example configuration for an application using both external
 		'title': 'My Organization LDAP',
 		'ldap': _my_ldap_config,
 	    },
+	    'my-cas': {
+		'type': 'cas'
+		'title': 'Some University CAS'
+		'cas_url_base': 'https://cas.example.com',
+	    },
 	    'sso': {
 		'type': 'shibboleth',
 		'title': 'SSO',
@@ -109,6 +114,9 @@ Here you can see an example configuration for an application using both external
 		    'affiliation': 'company'
 		}
 	    },
+	    'my-cas': {
+		'type': 'cas'
+	    },
 	    'my_shibboleth': {
 		'type': 'shibboleth',
 		'mapping': {
@@ -122,6 +130,7 @@ Here you can see an example configuration for an application using both external
 	MULTIPASS_PROVIDER_MAP = {
 	    'test_auth_provider': 'test_identity_provider',
 	    'my-ldap': 'my-ldap',
+	    'my-cas': 'my-cas',
 	    'my_shibboleth': 'my_shibboleth',
 		# You can also be explicit (only needed for more complex links)
 	    'github': [
