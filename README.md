@@ -55,7 +55,7 @@ _acdir_ldap_config = {
 }
 
 AuthProviders = {
-    'mephi-cas': {
+    'examplecom-cas': {
         'type': 'cas',
         'title': 'cas.example.com',
         'cas_url_base': 'https://cas.example.com',
@@ -63,7 +63,7 @@ AuthProviders = {
 }
 
 IdentityProviders = {
-    'mephi-cas': {
+    'examplecom-cas': {
         'type': 'cas',
         'mapping': {
             'first_name': 'first_name',
